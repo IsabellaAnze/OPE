@@ -41,9 +41,7 @@
         <activity
             android:name=".MsgActivity"
             android:theme="@style/EstiloToolbar" />
-        <activity
-            android:name=".LocalActivity"
-            android:theme="@style/EstiloToolbar" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

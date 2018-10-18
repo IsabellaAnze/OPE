@@ -13,21 +13,17 @@ class AquarelaActivity : DebugActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_aquarela)
 
-        // recuperar onjeto de Disciplina da Intent
+
         aquarela = intent?.getSerializableExtra("aquarela") as Aquarela
 
-        // configurar título com nome da Disciplina e botão de voltar da Toobar
-        // colocar toolbar
+
         var toolbar = findViewById<Toolbar>(R.id.tbFuncoes)
         setSupportActionBar(toolbar)
 
-        // alterar título da ActionBar
-        supportActionBar?.title = aquarela?.nome
 
         // up navigation
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // atualizar dados do carro
         var texto = findViewById<TextView>(R.id.nomeAquarela)
         texto.text = aquarela?.nome
         var imagem = findViewById<ImageView>(R.id.imagemAquarela)

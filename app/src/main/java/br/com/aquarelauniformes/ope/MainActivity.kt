@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         val imagem = findViewById<ImageView>(R.id.campo_imagem)
         imagem.setImageResource(R.drawable.login_aquarela)
-        
+
 
         val usuario = findViewById<EditText>(R.id.campo_usuario)
         val senha = findViewById<EditText>(R.id.campo_senha)
