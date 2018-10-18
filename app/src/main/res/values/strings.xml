@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">OPE</string>
+    <string name="action_buscar">Buscar</string>
+    <string name="action_atualizar">Atualizar</string>
+    <string name="action_config">Configurar</string>
+    <string name="navigation_drawer_open">Abrir</string>
+    <string name="navigation_drawer_close">Fechar</string>
+
+    <string name="cad_name_hint">Usuário</string>
+    <string name="cad_password_hint">Senha</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
