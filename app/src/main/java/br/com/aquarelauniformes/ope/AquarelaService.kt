@@ -3,6 +3,8 @@ package br.com.aquarelauniformes.ope
 import android.content.Context
 
 object AquarelaService {
+    val host = "http://isabellaanze.pythonanywhere.com"
+    var TAG = "WS_LMS"
     fun getAquarelas(contexto: Context): List<Aquarela> {
         val aquarela = mutableListOf<Aquarela>()
         for (i in 1..10) {
