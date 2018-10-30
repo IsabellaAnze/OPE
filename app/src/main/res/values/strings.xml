@@ -1,12 +1,13 @@
 <resources>
-    <string name="app_name">OPE</string>
+    <string name="app_name">LMSApp</string>
+    <string name="mensagem_login">Faça seu Login</string>
+
     <string name="action_buscar">Buscar</string>
     <string name="action_atualizar">Atualizar</string>
-    <string name="action_config">Configurar</string>
-    <string name="navigation_drawer_open">Abrir</string>
-    <string name="navigation_drawer_close">Fechar</string>
+    <string name="action_adicionar">Adicionar</string>
+    <string name="action_config">Configurações</string>
+    <string name="action_remover">Remover</string>
 
-    <string name="cad_name_hint">Usuário</string>
-    <string name="cad_password_hint">Senha</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
 </resources>

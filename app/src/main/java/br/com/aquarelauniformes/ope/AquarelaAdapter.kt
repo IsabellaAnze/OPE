@@ -8,44 +8,70 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import com.squareup.picasso.Picasso
 
 class AquarelaAdapter(
         val aquarela: List<Aquarela>,
-        val onClick: (Aquarela) -> Unit
-    )
-    : RecyclerView.Adapter<AquarelaAdapter.AquarelaViewHolder>() {
+        val onClick: (Aquarela) -> Unit): RecyclerView.Adapter<AquarelaAdapter.AquarelaViewHolder>() {
 
-    class AquarelaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    // ViewHolder com os elemetos da tela
+    class AquarelaViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val cardNome: TextView
-        val cardImagem: ImageView
+        val cardImg : ImageView
+        var cardProgress: ProgressBar
         var cardView: CardView
 
         init {
             cardNome = view.findViewById<TextView>(R.id.cardNome)
-            cardImagem = view.findViewById<ImageView>(R.id.cardImagem)
+            cardImg = view.findViewById<ImageView>(R.id.cardImg)
+            cardProgress = view.findViewById<ProgressBar>(R.id.cardProgress)
             cardView = view.findViewById<CardView>(R.id.card_aquarela)
 
         }
 
     }
 
-    override fun getItemCount() = aquarela.size
+    // Quantidade de disciplinas na lista
 
-    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): AquarelaViewHolder {
-        val view = LayoutInflater.from(p0.context).inflate(R.layout.adapter_aquarela, p0, false)
+    override fun getItemCount() = this.aquarela.size
+
+    // inflar layout do adapter
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AquarelaViewHolder {
+        // infla view no adapter
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.adapter_aquarela, parent, false)
+
+        // retornar ViewHolder
         val holder = AquarelaViewHolder(view)
         return holder
-
     }
 
+    // bind para atualizar Views com os dados
 
-    override fun onBindViewHolder(p0: AquarelaViewHolder, p1: Int) {
-        val contexto = p0.itemView.context
-        val aquarela = aquarela[p1]
+    override fun onBindViewHolder(holder: AquarelaViewHolder, position: Int) {
+        val context = holder.itemView.context
 
-        p0.cardNome.text = aquarela.nome
+        // recuperar objeto disciplina
+        val aquarela = aquarela[position]
 
-        p0.itemView.setOnClickListener { onClick(aquarela) }
+        // atualizar dados de disciplina
+
+        holder.cardNome.text = aquarela.nome
+        holder.cardProgress.visibility = View.VISIBLE
+
+        // download da imagem
+        Picasso.with(context).load(aquarela.foto).fit().into(holder.cardImg,
+                object: com.squareup.picasso.Callback{
+                    override fun onSuccess() {
+                        holder.cardProgress.visibility = View.GONE
+                    }
+
+                    override fun onError() {
+                        holder.cardProgress.visibility = View.GONE
+                    }
+                })
+
+        // adiciona evento de clique
+        holder.itemView.setOnClickListener {onClick(aquarela)}
     }
 }
-
