@@ -18,6 +18,6 @@ object DatabaseManager {
     }
 
     fun getAquarelaDAO(): AquarelaDAO {
-        return dbInstance.disciplinaDAO()
+        return dbInstance.aquarelaDAO()
     }
 }

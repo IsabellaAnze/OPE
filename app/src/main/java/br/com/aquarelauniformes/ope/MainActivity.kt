@@ -10,7 +10,7 @@ import android.widget.*
 import br.com.aquarelauniformes.ope.R.id.*
 import kotlinx.android.synthetic.main.login.*
 import br.com.aquarelauniformes.ope.*
-import android.app.Activity
+
 
 
 class MainActivity : AppCompatActivity() {
