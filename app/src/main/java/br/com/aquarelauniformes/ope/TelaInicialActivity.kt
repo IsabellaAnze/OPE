@@ -44,7 +44,7 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
         setSupportActionBar(toolbar)
 
         // alterar título da ActionBar
-        supportActionBar?.title = "Disciplinas"
+        supportActionBar?.title = "Aquarela"
 
         // up navigation
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

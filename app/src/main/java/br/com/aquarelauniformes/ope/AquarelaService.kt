@@ -13,7 +13,7 @@ import java.net.URL
 
 object AquarelaService {
 
-    //TROQUE PELO IP DE ONDE ESTÁ O WS
+
     val host = "http://isabellaanze.pythonanywhere.com"
     val TAG = "WS_LMSApp"
 
