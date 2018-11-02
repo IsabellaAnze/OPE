@@ -45,7 +45,7 @@ class AquarelaActivity : DebugActivity() {
     // método sobrescrito para inflar o menu na Actionbar
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // infla o menu com os botões da ActionBar
-        menuInflater.inflate(R.menu.menu_main_disciplina, menu)
+        menuInflater.inflate(R.menu.menu_main_aquarela, menu)
         return true
     }
 

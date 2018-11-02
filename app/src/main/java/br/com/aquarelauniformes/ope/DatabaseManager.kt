@@ -1,7 +1,6 @@
 package br.com.aquarelauniformes.ope
 
 import android.arch.persistence.room.Room
-import br.com.aquarelauniformes.ope.lmsapp.LMSApplication
 
 
 object DatabaseManager {

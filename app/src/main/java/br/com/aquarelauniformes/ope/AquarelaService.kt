@@ -4,7 +4,6 @@ import android.content.Context
 import android.provider.CalendarContract
 import android.util.Log
 import android.widget.Toast
-import br.com.aquarelauniformes.ope.lmsapp.LMSApplication
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import org.json.JSONArray

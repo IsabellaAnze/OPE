@@ -1,4 +1,4 @@
-package br.com.aquarelauniformes.ope.lmsapp
+package br.com.aquarelauniformes.ope
 
 import android.app.Application
 import java.lang.IllegalStateException

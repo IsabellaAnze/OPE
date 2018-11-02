@@ -2,7 +2,6 @@ package br.com.aquarelauniformes.ope
 
 import android.content.Context
 import android.content.SharedPreferences
-import br.com.aquarelauniformes.ope.lmsapp.LMSApplication
 
 object Prefs {
     val PREF_ID = "LMS"

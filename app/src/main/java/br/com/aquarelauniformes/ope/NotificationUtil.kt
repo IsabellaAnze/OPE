@@ -11,7 +11,6 @@ import android.opengl.Visibility
 import android.support.v4.app.NotificationCompat
 import android.support.v4.app.NotificationManagerCompat
 import android.view.View
-import br.com.aquarelauniformes.ope.lmsapp.LMSApplication
 
 object NotificationUtil {
 
