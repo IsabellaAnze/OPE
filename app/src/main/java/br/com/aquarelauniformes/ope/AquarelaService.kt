@@ -14,15 +14,16 @@ import java.net.URL
 object AquarelaService {
 
     //TROQUE PELO IP DE ONDE ESTÁ O WS
-    val host = "http://fesousa.pythonanywhere.com"
+    val host = "http://isabellaanze.pythonanywhere.com"
     val TAG = "WS_LMSApp"
 
     fun getAquarela(context: Context): List<Aquarela> {
         var aquarela = ArrayList<Aquarela>()
         if (AndroidUtils.isInternetDisponivel(context)) {
             val url = "$host/aquarela"
-            val json = HttpHelper.get(url)
-            aquarela = parserJson(json)
+            val jsonArray = HttpHelper.get(url)
+            aquarela = parserJson(jsonArray)
+            Log.d("APP", jsonArray)
             // salvar offline
             for (d in aquarela) {
                 saveOffline(d)
